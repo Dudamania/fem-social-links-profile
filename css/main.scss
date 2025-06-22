@@ -1,0 +1,47 @@
+:root {
+    --green: #C5F82A;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray700: #333333;
+    --gray800: #1F1F1F;
+    --gray900: #141414;
+}
+
+html {
+
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--gray900);
+}
+
+h1, h2, h3, h4, h5 {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+p {
+    font-size: 0.875rem;
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-modal {
+    background-color: var(--gray800);
+    border-radius: 12px;
+
+    .btn {
+        background-color: var(--gray700);
+        border-radius: 12px;
+        transition: .2s all ease-in;
+
+        &:hover {
+            background-color: var(--green);
+        }
+    }
+}
