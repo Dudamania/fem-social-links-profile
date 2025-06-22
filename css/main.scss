@@ -7,23 +7,33 @@
     --gray900: #141414;
 }
 
-html {
+@font-face {
+    font-family: Inter;
+    src: url(../assets/fonts/Inter-VariableFont.ttf);
+}
 
+html {
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--gray900);
+    height: 100%;
 }
 
 h1, h2, h3, h4, h5 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--white);
+    text-align: center;
+    font-weight: 600;
 }
 
 p {
     font-size: 0.875rem;
     color: var(--white);
+    text-align: center;
 }
 
 a {
@@ -31,17 +41,59 @@ a {
     color: inherit;
 }
 
-.main-modal {
-    background-color: var(--gray800);
-    border-radius: 12px;
+.modal-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 
-    .btn {
-        background-color: var(--gray700);
+    .main-modal {
+        background-color: var(--gray800);
         border-radius: 12px;
-        transition: .2s all ease-in;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 350px;
+        padding: 20px;
+        padding-top: 35px;
 
-        &:hover {
-            background-color: var(--green);
+        .profile-pic {
+            border-radius: 100%;
+            max-width: 100px;
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
+
+        .location {
+            font-size: 0.875rem;
+            color: var(--green);
+            margin-bottom: 30px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: stretch;
+            row-gap: 15px;
+            margin-top: 15px;
+
+            .btn {
+                background-color: var(--gray700);
+                border-radius: 12px;
+                transition: .2s all ease-in;
+                width: 100%;
+                padding: 10px;
+                font-weight: 700;
+                color: var(--white);
+
+                &:hover {
+                    background-color: var(--green);
+                    color: var(--gray900);
+                }
+            }
         }
     }
 }
